@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .contenedor {
+            display: flex;
+        }
+        .izquierda,
+        .derecha {
+            flex: 1;
+            padding: 10px;
+        }
+        .lista .list-group-item {
+            border: none;
+            border-radius: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Lista de Tareas</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Agregar Tarea</div>
+                    <div class="card-body text-center"> 
+                        <label for="texto">INGRESE UNA TAREA:</label>
+                        <div class="input-group">
+                            <input type="text" id="texto" class="form-control" placeholder="Escribe un texto">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" onclick="agregarTexto()">Agregar</button>
+                            </div>
+                        </div>
+                        <br>
+                        <img src="Tarea.jpg" alt="..." width="370" height="250" class="mx-auto">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Lista de Tareas</div>
+                    <ul id="listaTextos" class="list-group list-group-flush"></ul>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <script src="JS/funciones.js"></script>
+    <script src="JS/tarea.js"></script>
+    <script src="JS/storage.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
